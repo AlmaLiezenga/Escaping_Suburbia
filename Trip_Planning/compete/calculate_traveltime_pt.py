@@ -18,8 +18,8 @@ req = otp.createRequest()
 req.setModes('TRANSIT, BUS, RAIL, SUBWAY, TRAM, WALK')     
 #req.setMaxTimeSec(3600) 
 
-origins = otp.loadCSVPopulation('pt_origins_B_2022_4.csv', 'origin latitude', 'origin longitude')
-destinations = otp.loadCSVPopulation('pt_destinations_B_2022.csv', 'destination latitude', 'destination longitude')
+origins = otp.loadCSVPopulation('origins.csv', 'origin latitude', 'origin longitude')
+destinations = otp.loadCSVPopulation('destinations.csv', 'destination latitude', 'destination longitude')
 
 # Create a CSV output
 matrixCsv = otp.createCSVOutput()
@@ -51,7 +51,7 @@ for origin in origins:
     print('completed run for', origin.getStringData('GEO_ID_origin'))
 
 # Save the result
-matrixCsv.save('traveltimes/traveltimes_pt_B_2022_4.csv')
+matrixCsv.save('traveltimes/traveltimes.csv')
 
 # Stop timing the code
 print("Elapsed time was %g seconds" % (time.time() - start_time))
