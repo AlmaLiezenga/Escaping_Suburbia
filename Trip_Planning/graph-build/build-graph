@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+java -Xmx6G -jar otp-1.3.0-shaded.jar \
+  --cache . \
+  --basePath . \
+  --build .
