@@ -15,11 +15,11 @@ router = otp.getRouter('graph_folder')
 # Create a default request for a given departure time
 req = otp.createRequest()
 # define transport mode
-req.setModes('WALK')     
+req.setModes('CAR')     
 #req.setMaxTimeSec(3600) 
 
-origins = otp.loadCSVPopulation('origins_B_2.csv', 'latitude', 'longitude')
-destinations = otp.loadCSVPopulation('destinations_B.csv', 'latitude', 'longitude')
+origins = otp.loadCSVPopulation('origins.csv', 'latitude', 'longitude')
+destinations = otp.loadCSVPopulation('destinations.csv', 'latitude', 'longitude')
 
 # Create a CSV output
 matrixCsv = otp.createCSVOutput()
@@ -45,7 +45,7 @@ for origin in origins:
     print('completed run for', origin.getStringData('GEO_ID'))
 
 # Save the result
-matrixCsv.save('traveltimes/traveltimes_walk_B_2.csv')
+matrixCsv.save('traveltimes/traveltimes.csv')
 
 # Stop timing the code
 print("Elapsed time was %g seconds" % (time.time() - start_time))
