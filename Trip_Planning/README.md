@@ -23,5 +23,3 @@ For getting it to work:
 
 For getting it to work fast:
 * I initially planned to evaluate my origin-destinations pairs one by one. This meant that for each origin I would calculate the path to one destintation, store that travel time and move on to the next pair. However, this does not really fit with how OTP works. Due to the way OTP evaluates the graph ones you set the origin, calculating the travel time to several destinations at once costs virtually no time. 
-
-Also small shoutout to @duijf for diving into some documentation with me and helping me out with this code overall. 
