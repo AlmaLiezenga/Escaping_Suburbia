@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+/Volumes/Almadisk1TB/jython2.7.0/bin/jython \
+  -J-XX:-UseGCOverheadLimit \
+  -J-Xmx8G \
+  -Dpython.path=otp-1.3.0-shaded.jar \
+  calculate_traveltime_pt.py
