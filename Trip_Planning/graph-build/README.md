@@ -8,3 +8,9 @@
 # What you'll get
 
 * a graph.obj that can be processed by OTP 1.3
+
+# How you can run this 
+
+* make sure you have all the required files in your folder
+* navigat to your folder 
+* run ./build-graph in your terminal 
