@@ -1,4 +1,1 @@
-with the output of the trip planning accessibility analysis can be conducted. this folder contains python notebooks but also some excel example tables. 
-Following files 
-
-* This data is made up! Just making sure, no real data here. 
+with the output of the trip planning accessibility analysis can be conducted. This folder contains python notebooks that show how cumulative access scores were created from the output of the trip planning efforts. 
