@@ -12,7 +12,7 @@ start_time = time.time()
 # Get the default router
 router = otp.getRouter('graph_folder')
 
-origins = otp.loadCSVPopulation('origins/origins_B.csv', 'latitude', 'longitude')
+origins = otp.loadCSVPopulation('origins/origins.csv', 'latitude', 'longitude')
 destinations = otp.loadCSVPopulation('destinations/jobs_destinations.csv', 'LATITUDE', 'LONGITUDE')
 
 # Create a CSV output
@@ -46,7 +46,7 @@ for origin in origins:
     print('completed run for', origin.getStringData('GEOID20'))
 
 # Save the result
-matrixCsv.save('traveltimes/traveltimes_jobs_transit_B.csv')
+matrixCsv.save('traveltimes/traveltimes_jobs_transit.csv')
 
 # Stop timing the code
 print("Elapsed time was %g seconds" % (time.time() - start_time))
